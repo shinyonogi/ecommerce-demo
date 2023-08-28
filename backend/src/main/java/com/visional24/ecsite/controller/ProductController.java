@@ -16,23 +16,15 @@ public class ProductController {
     private ProductService productService;
 
     @Autowired
-    public ProductController(ProductService productService) {
-        this.productService = productService;
-    }
+    public ProductController(ProductService productService) { this.productService = productService; }
 
     @GetMapping
-    public List<Product> getAllProducts() {
-        return productService.findAllProducts();
-    }
+    public List<Product> getAllProducts() { return productService.findAllProducts(); }
 
     @GetMapping("/{productId}")
-    public Optional<Product> getProductById(@PathVariable Long productId) {
-        return productService.findProductById(productId);
-    }
+    public Optional<Product> getProductById(@PathVariable Long productId) { return productService.findProductById(productId); }
 
     @PostMapping
-    public Product addProduct(@RequestBody Product product) {
-        return productService.saveProduct(product);
-    }
+    public Product addProduct(@RequestBody Product product) { return productService.saveProduct(product); }
 
 }

@@ -1,9 +1,7 @@
 package com.visional24.ecsite.model.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
 
 @Entity
 public class OrderDetail {
@@ -11,59 +9,47 @@ public class OrderDetail {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private long orderId;
-    private long productId;
+    @ManyToOne
+    @JoinColumn(name = "orderId")
+    private Order order;
+    @ManyToOne
+    @JoinColumn(name = "productId")
+    private Product product;
     private int quantity;
     private double price;
 
     public OrderDetail() {}
 
-    public OrderDetail(long id, long orderId, long productId, int quantity, double price) {
-        this.id = id;
-        this.orderId = orderId;
-        this.productId = productId;
+    public OrderDetail(Order order, Product product, int quantity, double price) {
+        this.order = order;
+        this.product = product;
         this.quantity = quantity;
         this.price = price;
+
+        System.out.println("Order Detail Initialized");
     }
 
-    public long getId() {
-        return id;
-    }
+    // gerOrder() and getProduct() Method return their IDs!
 
-    public void setId(long id) {
-        this.id = id;
-    }
+    public long getId() { return id; }
 
-    public long getOrderId() {
-        return orderId;
-    }
+    public long getOrder() { return order.getId(); }
 
-    public void setOrderId(long orderId) {
-        this.orderId = orderId;
-    }
+    public void setOrder(Order order) { this.order = order; }
 
-    public long getProductId() {
-        return productId;
-    }
+    public long getProduct() { return product.getId(); }
 
-    public void setProductId(long productId) {
-        this.productId = productId;
-    }
+    public void setProduct(Product product) { this.product = product; }
 
-    public int getQuantity() {
-        return quantity;
-    }
+    public void setId(long id) { this.id = id; }
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
+    public int getQuantity() { return quantity; }
 
-    public double getPrice() {
-        return price;
-    }
+    public void setQuantity(int quantity) { this.quantity = quantity; }
 
-    public void setPrice(double price) {
-        this.price = price;
-    }
+    public double getPrice() { return price; }
+
+    public void setPrice(double price) { this.price = price; }
+
 }
 
