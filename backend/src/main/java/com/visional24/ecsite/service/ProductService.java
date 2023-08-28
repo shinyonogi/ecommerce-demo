@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-//@Serviceアノテーションは、Springのコンテナにビジネスロジックを持つサービス層のコンポーネントとして登録される。
+
 @Service
 public class ProductService {
 
