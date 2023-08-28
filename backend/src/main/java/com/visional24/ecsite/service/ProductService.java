@@ -1,5 +1,6 @@
 package com.visional24.ecsite.service;
 
+import com.visional24.ecsite.exception.ProductNotSavedException;
 import com.visional24.ecsite.model.entity.Product;
 import com.visional24.ecsite.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +18,13 @@ public class ProductService {
     @Autowired
     public ProductService(ProductRepository productRepository) { this.productRepository = productRepository; }
 
-    public Product saveProduct(Product product) { return productRepository.save(product); }
+    public Product saveProduct(Product product) {
+        try {
+            return productRepository.save(product);
+        } catch (Exception e) {
+            throw new ProductNotSavedException("Product could not be saved");
+        }
+    }
 
     public Optional<Product> findProductById(Long id) { return productRepository.findById(id); }
 

@@ -2,7 +2,6 @@ package com.visional24.ecsite.service;
 
 import com.visional24.ecsite.model.entity.Order;
 import com.visional24.ecsite.model.entity.OrderDetail;
-import com.visional24.ecsite.model.entity.Product;
 import com.visional24.ecsite.model.entity.dto.OrderDetailDto;
 import com.visional24.ecsite.model.entity.dto.OrderDto;
 import com.visional24.ecsite.repository.OrderRepository;
