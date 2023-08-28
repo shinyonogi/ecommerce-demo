@@ -34,7 +34,7 @@ public class Product {
         this.description = description;
     }
 
-    //GetterとSetter
+    //GetterとSetterを定義。
 
     public long getId() {
         return id;
