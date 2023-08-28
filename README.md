@@ -1,4 +1,4 @@
-# 🤑 EC サイトデモ
+# 🤑 EC サイトデモ (Still under development...)
 
 このプロジェクトは EC サイトのデモアプリケーションです。Spring Boot と React を使って実装されています！
 
