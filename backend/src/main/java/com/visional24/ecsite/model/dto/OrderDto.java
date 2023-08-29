@@ -1,4 +1,4 @@
-package com.visional24.ecsite.model.entity.dto;
+package com.visional24.ecsite.model.dto;
 
 import java.time.LocalDate;
 import java.util.List;

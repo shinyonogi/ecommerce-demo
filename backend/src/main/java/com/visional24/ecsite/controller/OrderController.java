@@ -1,8 +1,8 @@
 package com.visional24.ecsite.controller;
 
 import com.visional24.ecsite.exception.OrderNotCreatedException;
+import com.visional24.ecsite.model.dto.OrderDto;
 import com.visional24.ecsite.model.entity.Order;
-import com.visional24.ecsite.model.entity.dto.OrderDto;
 import com.visional24.ecsite.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
