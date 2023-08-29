@@ -5,6 +5,8 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
+import java.util.Objects;
+
 
 @Entity
 public class Product {
@@ -25,9 +27,32 @@ public class Product {
         this.description = description;
     }
 
+    @Override
+    public int hashCode() { return Objects.hash(id); }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Product product = (Product) o;
+        return id == product.id;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", price=" + price +
+                ", description='" + description + '\'' +
+                '}';
+    }
+
     public long getId() {
         return id;
     }
+
+    public void setId(long id) { this.id = id; }
 
     public String getName() { return name; }
 
