@@ -43,15 +43,15 @@ public class ProductController {
         return new ResponseEntity<>(savedProduct, HttpStatus.CREATED);
     }
 
-    @ExceptionHandler
+    @ExceptionHandler(ProductNotSavedException.class)
     public ResponseEntity<String> handleProductNotSavedException(ProductNotSavedException e) {
         return new ResponseEntity<>(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
-    public ResponseEntity<String> handleValidationExceptions(MethodArgumentNotValidException ex) {
+    public ResponseEntity<String> handleValidationExceptions(MethodArgumentNotValidException e) {
         StringBuilder errors = new StringBuilder();
-        ex.getBindingResult().getAllErrors().forEach((error) -> {
+        e.getBindingResult().getAllErrors().forEach((error) -> {
             errors.append(error.getDefaultMessage()).append("\n");
         });
         return ResponseEntity.badRequest().body(errors.toString());

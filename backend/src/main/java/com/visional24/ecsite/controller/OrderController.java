@@ -1,6 +1,7 @@
 package com.visional24.ecsite.controller;
 
 import com.visional24.ecsite.exception.OrderNotCreatedException;
+import com.visional24.ecsite.exception.ProductNotFoundException;
 import com.visional24.ecsite.model.dto.OrderDto;
 import com.visional24.ecsite.model.entity.Order;
 import com.visional24.ecsite.service.OrderService;
@@ -41,6 +42,11 @@ public class OrderController {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
         return new ResponseEntity<>(allOrders, HttpStatus.OK);
+    }
+
+    @ExceptionHandler(ProductNotFoundException.class)
+    public ResponseEntity<String> handleProductNotFoundException(ProductNotFoundException e) {
+        return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
     }
 
     @ExceptionHandler(OrderNotCreatedException.class)
