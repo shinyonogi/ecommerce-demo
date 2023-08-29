@@ -1,0 +1,37 @@
+.navbar-container, nav {
+    width: 100vw;
+    height: 12vh;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+}
+
+.navbar-elemenents {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    list-style-type: none;
+}
+
+.navbar-elemenents li {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background-color: white;
+    font-size: 1.5rem;
+}
+
+.vertical-line {
+    height: 80%;
+    width: 1px;
+    margin: auto 0;
+    background-color: rgb(122, 122, 122);
+}
+
+.navbar-elemenents span {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
