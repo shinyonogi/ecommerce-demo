@@ -1,5 +1,6 @@
 package com.visional24.ecsite.service;
 
+import com.visional24.ecsite.exception.OrderNotCreatedException;
 import com.visional24.ecsite.model.entity.Order;
 import com.visional24.ecsite.model.entity.OrderDetail;
 import com.visional24.ecsite.model.entity.dto.OrderDetailDto;
@@ -32,8 +33,7 @@ public class OrderService {
                 OrderDetail orderDetail = new OrderDetail(order, productService.findProductById(orderDetailDto.getProductId()).get(), orderDetailDto.getQuantity(), orderDetailDto.getPrice());
                 orderDetails.add(orderDetail);
             }else {
-                //Replace with exception
-                System.out.println("Product could not be added to the Order Detail.");
+                throw new OrderNotCreatedException("Product could not be found. Therefore Order could not be created");
             }
         }
         order.setOrderDetails(orderDetails);
