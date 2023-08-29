@@ -1,0 +1,6 @@
+.header-container {
+    width: 100vw;
+    height: 88vh;
+    background-image: url('../../pictures/main-cat.jpg');
+    background-size: cover;
+}
