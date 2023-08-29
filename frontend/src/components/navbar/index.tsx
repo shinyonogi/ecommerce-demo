@@ -23,7 +23,7 @@ function Navbar() {
                         transition={{ ease: "easeOut", duration: 1.17}}
                     >
                         <div className="vertical-line"></div>
-                        <motion.span whileHover={{scale:1.5}}>にゃー</motion.span>
+                        <motion.span whileHover={{ scale:1.5 }}>にゃー</motion.span>
                     </motion.li>
                     <motion.li
                         initial={{y : -400}}
