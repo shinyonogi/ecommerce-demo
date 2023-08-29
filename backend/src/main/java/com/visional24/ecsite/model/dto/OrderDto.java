@@ -21,27 +21,16 @@ public class OrderDto {
         this.orderDetails = orderDetails;
     }
 
-    public String getCustomerName() {
-        return customerName;
-    }
+    public String getCustomerName() { return customerName; }
 
-    public String getAddress() {
-        return address;
-    }
+    public String getAddress() { return address; }
 
-    public String getEmail() {
-        return email;
-    }
+    public String getEmail() { return email; }
 
-    public LocalDate getOrderDate() {
-        return orderDate;
-    }
+    public LocalDate getOrderDate() { return orderDate; }
 
-    public double getTotalPrice() {
-        return totalPrice;
-    }
+    public double getTotalPrice() { return totalPrice; }
 
-    public List<OrderDetailDto> getOrderDetails() {
-        return orderDetails;
-    }
+    public List<OrderDetailDto> getOrderDetails() { return orderDetails; }
+
 }

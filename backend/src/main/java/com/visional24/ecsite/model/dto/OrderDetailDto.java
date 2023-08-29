@@ -12,15 +12,10 @@ public class OrderDetailDto {
         this.price = price;
     }
 
-    public long getProductId() {
-        return productId;
-    }
+    public long getProductId() { return productId; }
 
-    public int getQuantity() {
-        return quantity;
-    }
+    public int getQuantity() { return quantity; }
 
-    public double getPrice() {
-        return price;
-    }
+    public double getPrice() { return price;}
+
 }
