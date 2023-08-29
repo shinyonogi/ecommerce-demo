@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 
 
 @Entity
+@Table(name = "orderdetails")
 public class OrderDetail {
 
     @Id
@@ -25,11 +26,9 @@ public class OrderDetail {
         this.product = product;
         this.quantity = quantity;
         this.price = price;
-
-        System.out.println("Order Detail Initialized");
     }
 
-    // gerOrder() and getProduct() Method return their IDs!
+    // gerOrder() and getProduct() Methods return their IDs!
 
     public long getId() { return id; }
 

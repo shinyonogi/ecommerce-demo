@@ -1,14 +1,12 @@
 package com.visional24.ecsite.model.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.util.Objects;
 
 
 @Entity
+@Table(name = "products")
 public class Product {
 
     @Id
@@ -17,6 +15,8 @@ public class Product {
     private String name;
     private double price;
     private String description;
+    private String imagePath;
+
 
     public Product() {}
 
@@ -65,5 +65,9 @@ public class Product {
     public String getDescription(){ return description; }
 
     public void setDescription(String description) { this.description = description;}
+
+    public String getImagePath() { return imagePath; }
+
+    public void setImagePath() { this.imagePath = imagePath; }
 
 }

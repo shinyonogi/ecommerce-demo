@@ -29,8 +29,6 @@ public class Order {
         this.email = email;
         this.orderDate = orderDate;
         this.totalPrice = totalPrice;
-
-        System.out.println("Order Initialized");
     }
 
     public long getId() { return id; }
