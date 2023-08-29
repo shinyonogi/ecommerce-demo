@@ -49,7 +49,11 @@ public class Order {
 
     public LocalDate getOrderDate() { return orderDate; }
 
+    public void setOrderDate(LocalDate orderDate) { this.orderDate = orderDate; }
+
     public double getTotalPrice() { return totalPrice; }
+
+    public void setTotalPrice(double totalPrice) { this.totalPrice = totalPrice; }
 
     public List<OrderDetail> getOrderDetails() { return orderDetails; }
 
