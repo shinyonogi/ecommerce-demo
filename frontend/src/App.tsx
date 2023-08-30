@@ -9,7 +9,6 @@ import Header from './components/main/header';
 function App() {
   return (
     <div className="App">
-      <Navbar />
       <Header />
     </div>
   );

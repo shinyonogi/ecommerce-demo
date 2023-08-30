@@ -1,6 +1,10 @@
-.App, ul, h1 {
+.App, ul, h1, h2, h3 {
   margin: 0 0;
   padding: 0 0;
   overflow: hidden;
+}
+
+.button {
+  border-radius: 50px;
 }
 

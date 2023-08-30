@@ -3,8 +3,8 @@
     height: 12vh;
     display: flex;
     justify-content: center;
-    background-color: rgb(192, 162, 152);
-    border-bottom: solid 1px rgb(125, 122, 122);;
+    background-color: transparent;
+    border-bottom: solid 1px white;
 }
 
 .navbar-elemenents {
@@ -21,13 +21,15 @@
     align-items: center;
     cursor: pointer;
     font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
 }
 
 .vertical-line {
     height: 70%;
     width: 1px;
     margin: auto 0;
-    background-color: rgb(122, 122, 122);
+    background-color: white;
 }
 
 .navbar-elemenents span {
