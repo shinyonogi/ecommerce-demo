@@ -1,7 +1,7 @@
 import React from 'react';
-import './header.css';
-
 import { easeIn, easeOut, motion } from 'framer-motion';
+
+import './header.css';
 
 import Navbar from '../navbar';
 
@@ -14,8 +14,16 @@ function Header() {
             className='header-container'
         >
             <Navbar />
-            <h1>眠いんだにゃ。</h1>
-            <h2>- ドラえもんの初期デザインでは、口が「△」の形をしており、現在の丸い口とは異なっていました -</h2>
+            <motion.h1
+                initial={{x : -800}}
+                animate={{ x: 0}}
+                transition={{ ease: "easeOut", duration: 2 }}
+            >眠いんだにゃ。</motion.h1>
+            <motion.h2
+                initial={{x : 800}}
+                animate={{ x: 0}}
+                transition={{ ease: "easeOut", duration: 2 }}
+            >- ドラえもんの初期デザインでは、口が「△」の形をしており、現在の丸い口とは異なっていました -</motion.h2>
             <motion.button
                 className='header-button button'
                 whileHover={{ scale: 1.2, color:'gold'}}
